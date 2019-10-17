@@ -4,7 +4,7 @@
   "license": "ISC",
   "dependencies": {
     "@babel/polyfill": "^7.0.0",
-    "@tensorflow-models/knn-classifier": "^1.0.0",
+    "@tensorflow-models/knn-classifier": "1.0.0",
     "@tensorflow-models/mobilenet": "^1.0.1",
     "@tensorflow/tfjs": "^1.2.11"
   },
