@@ -328,7 +328,7 @@ var Main = function () {
   return Main;
 }();
 
-if (window.location.pathname === "/training.html") {
+if (window.location.pathname === "/training.html" || window.location.href.includes("training.html")) {
   window.addEventListener('load', function () {
     return new Main();
   });
