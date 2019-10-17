@@ -233,7 +233,7 @@ class Main {
 }
 
 
-if(window.location.pathname === "/learning-tf-keyboard/training.html" || window.location.pathname === "/training.html"){
+// if(window.location.pathname === "/learning-tf-keyboard/training.html" || window.location.pathname === "/training.html"){
   window.addEventListener('load', () => new Main());
   document.getElementsByClassName('test-predictions')[0].addEventListener('click', function(){
     testPrediction = true;
@@ -249,5 +249,5 @@ if(window.location.pathname === "/learning-tf-keyboard/training.html" || window.
       document.getElementsByClassName('interaction-block')[0].classList.add('display');
     }
   })
-}
+// }
 
