@@ -2,15 +2,18 @@
   "name": "cl-teachable-machine-boilerplate",
   "version": "0.1.0",
   "license": "ISC",
+  "homepage": "https://vvvirenyu.github.io/learning-tf-keyboard/",
   "dependencies": {
     "@babel/polyfill": "^7.0.0",
     "@tensorflow-models/knn-classifier": "1.0.0",
     "@tensorflow-models/mobilenet": "^1.0.1",
-    "@tensorflow/tfjs": "^1.2.11"
+    "@tensorflow/tfjs": "^1.2.11",
+    "gh-pages": "^2.1.1"
   },
   "scripts": {
     "start": "budo main.js:dist/build.js --live --host localhost",
-    "build": "browserify main.js -o dist/build.js"
+    "build": "browserify main.js -o dist/build.js",
+    "deploy": "gh-pages -d build"
   },
   "pre-commit": [
     "build"
