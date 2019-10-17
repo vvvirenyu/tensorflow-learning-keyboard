@@ -12,7 +12,7 @@
   },
   "scripts": {
     "start": "budo main.js:dist/build.js --live --host localhost",
-    "build": "browserify main.js -o dist/build.js",
+    "build": "browserify main.js -o dist/build.js --live --host",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist/build.js"
   },
