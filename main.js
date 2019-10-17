@@ -244,8 +244,8 @@ class Main {
     startPrediction = true;
 
     if(startPrediction){
-      document.getElementsByClassName('training-section')[0].classList.add('no-display');
-      document.getElementsByClassName('predictions-buttons')[0].classList.add('no-display');
+      // document.getElementsByClassName('training-section')[0].classList.add('no-display');
+      // document.getElementsByClassName('predictions-buttons')[0].classList.add('no-display');
       document.getElementsByClassName('interaction-block')[0].classList.add('display');
     }
   })
