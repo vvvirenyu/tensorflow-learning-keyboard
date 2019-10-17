@@ -328,27 +328,25 @@ var Main = function () {
   return Main;
 }();
 
-// if(window.location.pathname === "/learning-tf-keyboard/training.html" || window.location.pathname === "/training.html"){
+if (window.location.pathname === "/training.html") {
+  window.addEventListener('load', function () {
+    return new Main();
+  });
+  document.getElementsByClassName('test-predictions')[0].addEventListener('click', function () {
+    testPrediction = true;
+  });
 
+  document.getElementsByClassName('start-prediction')[0].addEventListener('click', function () {
+    if (!testPrediction) testPrediction = true;
+    startPrediction = true;
 
-window.addEventListener('load', function () {
-  return new Main();
-});
-document.getElementsByClassName('test-predictions')[0].addEventListener('click', function () {
-  testPrediction = true;
-});
-
-document.getElementsByClassName('start-prediction')[0].addEventListener('click', function () {
-  if (!testPrediction) testPrediction = true;
-  startPrediction = true;
-
-  if (startPrediction) {
-    // document.getElementsByClassName('training-section')[0].classList.add('no-display');
-    // document.getElementsByClassName('predictions-buttons')[0].classList.add('no-display');
-    document.getElementsByClassName('interaction-block')[0].classList.add('display');
-  }
-});
-// }
+    if (startPrediction) {
+      document.getElementsByClassName('training-section')[0].classList.add('no-display');
+      document.getElementsByClassName('predictions-buttons')[0].classList.add('no-display');
+      document.getElementsByClassName('interaction-block')[0].classList.add('display');
+    }
+  });
+}
 
 },{"@babel/polyfill":2,"@tensorflow-models/knn-classifier":4,"@tensorflow-models/mobilenet":7,"@tensorflow/tfjs":325,"@tensorflow/tfjs-core/dist/test_util":241}],2:[function(require,module,exports){
 "use strict";
