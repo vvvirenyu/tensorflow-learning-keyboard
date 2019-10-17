@@ -1,0 +1,48 @@
+{
+  "name": "cl-teachable-machine-boilerplate",
+  "version": "0.1.0",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/polyfill": "^7.0.0",
+    "@tensorflow-models/knn-classifier": "^1.0.0",
+    "@tensorflow-models/mobilenet": "^1.0.1",
+    "@tensorflow/tfjs": "^1.2.11"
+  },
+  "scripts": {
+    "start": "budo main.js:dist/build.js --live --host localhost",
+    "build": "browserify main.js -o dist/build.js"
+  },
+  "pre-commit": [
+    "build"
+  ],
+  "browserify": {
+    "transform": [
+      [
+        "babelify",
+        {
+          "presets": [
+            "es2015"
+          ],
+          "plugins": [
+            "syntax-async-functions",
+            "transform-regenerator"
+          ]
+        }
+      ]
+    ]
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-plugin-syntax-async-functions": "^6.13.0",
+    "babel-plugin-transform-regenerator": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-0": "^6.0.15",
+    "babelify": "^8.0.0",
+    "budo": "^10.0.4",
+    "pre-commit": "^1.2.2"
+  },
+  "description": "This project is a very quick prototype using the [Teachable Machine Boilerplate](https://github.com/googlecreativelab/teachable-machine-boilerplate).",
+  "main": "main.js",
+  "author": ""
+}
